@@ -20,6 +20,8 @@ function recorrerEnOrden() {
 
 
 function nuevoArbol() {
+    console.log()
+    alert('Resultados desplegados en consola')
     let expresion = document.getElementById('txtEntrada').value
     var nodos = Arbol.crear(expresion);
     window.nodoActual = nodos[0];
@@ -46,7 +48,7 @@ var Parcer = {
     },
 
     
-    //Depura la expresion algebraica, quita espacios en blanco y deja un espacio entre operadores y dijitos
+    //Depura la expresion algebraica, quita espacios en blanco y deja un espacio entre operadores y digitos
     prepararExpresion: function (expresion) {
         var simbolos = "+-*/()^";
         var salida = "";
@@ -183,7 +185,6 @@ var Arbol = {
 
 var Recorrido = {
     //(raíz, izquierdo, derecho)
-     
     preorden: function (nodo, log) {
         if (nodo == null)
             return;
